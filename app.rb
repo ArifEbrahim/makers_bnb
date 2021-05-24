@@ -15,8 +15,14 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/users' do
-    User.create(email: params[:email], password: params[:password])
+    user = User.create(email: params[:email], password: params[:password])
+    session[:user_id] = user.id
     redirect '/listings'
+  end 
+
+  get '/listings' do
+    @user = User.find(session[:user_id])
+    erb :"listings/index"
   end 
 
   run! if app_file == $0

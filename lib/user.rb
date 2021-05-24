@@ -25,6 +25,8 @@ class User
   end
 
   def self.find(user_id)
+    return nil unless user_id
+
     if ENV['ENVIRONMENT'] == 'test'
      connection =  PG.connect(dbname:'makers_bnb_test')
     else

@@ -2,8 +2,7 @@ require "pg"
 
 def truncate_test_data
   connection = PG.connect(dbname: 'makers_bnb_test')
-  connection.exec("TRUNCATE TABLE listings;")
-  connection.exec('TRUNCATE TABLE users;')
+  connection.exec("TRUNCATE TABLE listings, users;")
 end
 
 def persisted_data(table:, id:)

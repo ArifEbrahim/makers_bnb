@@ -1,1 +1,9 @@
 <h2>Welcome, <%=@user.email%></h2>
+
+<ul>
+  <% @listings.each do |listing| %>
+    <li>
+      <%= listing.address %>
+    </li>
+  <% end %>
+</ul>

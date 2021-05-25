@@ -1,4 +1,6 @@
-require "pg"
+# frozen_string_literal: true
+
+require 'pg'
 
 def truncate_test_tables
   connection = PG.connect(dbname: 'makers_bnb_test')

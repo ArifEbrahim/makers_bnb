@@ -12,7 +12,7 @@ A web application that allows users to list spaces they have available, and to h
 
 ## User stories
 
-1. Users sign-up
+1. User sign-up
 
 ```
 As a user,

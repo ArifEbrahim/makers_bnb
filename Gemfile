@@ -28,7 +28,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
    gem 'rack'
    gem 'rake'
    gem 'sinatra'
-   gem 'sinatra-activerecord'
+#    gem 'sinatra-activerecord'
    gem 'sinatra-contrib'
 #    gem 'sinatra-flash'
    gem 'webrick'

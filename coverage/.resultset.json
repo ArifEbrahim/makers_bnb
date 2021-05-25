@@ -1,8 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/registration_spec.rb": {
+      "/Users/jonnykelly/Desktop/makers_bnb/spec/features/book_spec.rb": {
         "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/jonnykelly/Desktop/makers_bnb/spec/features/registration_spec.rb": {
+        "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -15,8 +38,10 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/models/user_spec.rb": {
+      "/Users/jonnykelly/Desktop/makers_bnb/spec/models/user_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -55,14 +80,15 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/lib/user.rb": {
+      "/Users/jonnykelly/Desktop/makers_bnb/lib/user.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
           null,
           1,
-          null,
           1,
           null,
           1,
@@ -83,7 +109,6 @@
           4,
           null,
           4,
-          null,
           null,
           null,
           1,
@@ -97,11 +122,10 @@
           1,
           1,
           null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1621937782
+    "timestamp": 1621950878
   }
 }

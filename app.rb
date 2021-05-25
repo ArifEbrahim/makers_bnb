@@ -27,5 +27,13 @@ class MakersBnB < Sinatra::Base
     erb :"listings/index"
   end
 
+  get '/book' do 
+    erb(:book)
+  end
+
+  get '/booking_confirmation' do 
+    "Thank you for your booking request"
+  end 
+
   run! if app_file == $PROGRAM_NAME
 end

@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/listing_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/models/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -117,6 +117,6 @@
         ]
       }
     },
-    "timestamp": 1622008358
+    "timestamp": 1622017690
   }
 }

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/create_listing_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/makers_bnb/spec/features/create_listing_spec.rb": {
         "lines": [
           1,
           1,
@@ -20,7 +20,7 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/registration_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/makers_bnb/spec/features/registration_spec.rb": {
         "lines": [
           null,
           null,
@@ -36,7 +36,7 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/view_all_listings_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/makers_bnb/spec/features/view_all_listings_spec.rb": {
         "lines": [
           1,
           1,
@@ -50,7 +50,7 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/listing_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/makers_bnb/spec/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -74,7 +74,7 @@
           null
         ]
       },
-      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/models/user_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/makers_bnb/spec/models/user_spec.rb": {
         "lines": [
           null,
           null,
@@ -117,6 +117,6 @@
         ]
       }
     },
-    "timestamp": 1622008358
+    "timestamp": 1622033975
   }
 }

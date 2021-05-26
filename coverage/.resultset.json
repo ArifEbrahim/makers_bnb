@@ -1,10 +1,29 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/willoughbyhood/Projects/MakersBnB-main/makers_bnb/spec/features/create_listing_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/create_listing_spec.rb": {
         "lines": [
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/registration_spec.rb": {
+        "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -12,45 +31,18 @@
           1,
           1,
           null,
-          1,
-          1,
           1,
           1,
           null,
           null
         ]
       },
-      "/Users/willoughbyhood/Projects/MakersBnB-main/makers_bnb/spec/features/registration_spec.rb": {
-        "lines": [
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/willoughbyhood/Projects/MakersBnB-main/makers_bnb/spec/features/view_all_listings_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/features/view_all_listings_spec.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
           1,
@@ -59,7 +51,7 @@
           null
         ]
       },
-      "/Users/willoughbyhood/Projects/MakersBnB-main/makers_bnb/spec/models/listing_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/models/listing_spec.rb": {
         "lines": [
           1,
           null,
@@ -67,13 +59,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
           1,
           null,
           null,
@@ -81,15 +66,7 @@
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null,
           1,
-          null,
-          null,
-          null,
-          null,
           null,
           1,
           1,
@@ -98,7 +75,7 @@
           null
         ]
       },
-      "/Users/willoughbyhood/Projects/MakersBnB-main/makers_bnb/spec/models/user_spec.rb": {
+      "/Users/gunelmehdiyeva-chau/Projects/week_5/makers_bnb/spec/models/user_spec.rb": {
         "lines": [
           null,
           null,
@@ -141,6 +118,6 @@
         ]
       }
     },
-    "timestamp": 1622037987
+    "timestamp": 1622027979
   }
 }

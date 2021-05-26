@@ -35,11 +35,7 @@ attr_reader :user
   end
 
   post '/listings/create' do
-    Listing.create(
-      address: params[:address], 
-      name: params[:name], 
-      description: params[:description], 
-      price: params[:price])
+    Listing.create(address: params[:address])
     redirect "/listings"
   end
 

@@ -30,6 +30,15 @@ attr_reader :user
     erb :"listings/index"
   end
 
+
+  get '/book' do 
+    erb(:book)
+  end
+
+  get '/booking_confirmation' do 
+    "Thank you for your booking request"
+  end 
+
   get '/listings/new' do
     erb :"listings/new"
   end
@@ -38,6 +47,7 @@ attr_reader :user
     Listing.create(address: params[:address])
     redirect "/listings"
   end
+
 
   run! if app_file == $PROGRAM_NAME
 end

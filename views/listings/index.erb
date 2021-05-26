@@ -16,6 +16,9 @@
   <% @listings.each do |listing| %>
     <li>
       <%= listing.address %>
+      <%= listing.name %>
+      <%= listing.description %>
+      <%= listing.price %>
     </li>
   <% end %>
 </ul>

@@ -1,0 +1,4 @@
+ALTER TABLE listings
+  ADD COLUMN name VARCHAR(60), 
+  ADD COLUMN description VARCHAR(100), 
+  ADD COLUMN price VARCHAR(30);

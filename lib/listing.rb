@@ -15,7 +15,7 @@ class Listing
       connection = PG.connect(dbname: 'makers_bnb')
     end
 
-    result = connection.exec("INSERT INTO listings (address) VALUES('#{address}') returning id, address;")
+    result = connection.exec("INSERT INTO listings (address) VALUES('#{address}') RETURNING id, address;")
 
     Listing.new(id: result.first['id'], address: result.first['address'])
   end

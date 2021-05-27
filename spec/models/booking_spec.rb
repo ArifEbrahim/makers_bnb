@@ -24,9 +24,8 @@ RSpec.describe Booking do
       expect(booking.first['listing_id']).to eq(listing.id)
       expect(booking.first['guest_id']).to eq(user.id)
     end
-  
 
-    it 'raises an error when trying to book outside available dates' do
+    it 'returns false trying to book outside available dates' do
       listing = Listing.create(
         address: '1 example road',
         name: 'Central London flat',
@@ -39,16 +38,13 @@ RSpec.describe Booking do
         email: 'test@example.com',
         password: 'password123'
       )
-      booking = Booking.create(
-        start_date: '01/10/2021',
-        listing_id: listing.id,
-        guest_id: user.id
-      )
-      expect{Booking.create(
-        start_date: '01/10/2021',
-        listing_id: listing.id,
-        guest_id: user.id
-      )}.to raise_error('This property is unavailable')
+    
+      expect(
+        Booking.create(
+          start_date: '01/10/2021',
+          listing_id: listing.id,
+          guest_id: user.id
+        )).to be false
     end
   end
 end

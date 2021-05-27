@@ -18,10 +18,6 @@ attr_reader :user
     erb :"index"
   end
 
-  get '/users/new' do
-    erb :"users/new"
-  end
-
   post '/users' do
     user = User.create(email: params[:email], password: params[:password])
     session[:user_id] = user.id
@@ -34,14 +30,28 @@ attr_reader :user
     erb :"listings/index"
   end
 
+
+  get '/book' do 
+    erb(:book)
+  end
+
+  get '/booking_confirmation' do 
+    "Thank you for your booking request"
+  end 
+
   get '/listings/new' do
     erb :"listings/new"
   end
 
   post '/listings/create' do
-    Listing.create(address: params[:address])
+    Listing.create(
+      address: params[:address], 
+      name: params[:name], 
+      description: params[:description], 
+      price: params[:price])
     redirect "/listings"
   end
+
 
   run! if app_file == $PROGRAM_NAME
 end

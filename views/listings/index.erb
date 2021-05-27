@@ -4,10 +4,22 @@
   <h2>Welcome to Makers BnB </h2>
 <%end%>
 
+<h2> Book a space </h2>
+
+<div>
+  <form action="/listings/new" method="get">
+    <input type="submit" value="List a space">
+  </form>
+</div>
+
 <ul>
   <% @listings.each do |listing| %>
     <li>
       <%= listing.address %>
+      <%= listing.name %>
+      <%= listing.description %>
+      <%= listing.price %>
     </li>
   <% end %>
 </ul>
+

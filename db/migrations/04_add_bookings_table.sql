@@ -1,0 +1,1 @@
+CREATE TABLE bookings (id SERIAL PRIMARY KEY, start_date VARCHAR(60), listing_id VARCHAR(60), guest_id VARCHAR(60));

@@ -2,10 +2,18 @@
 
 <div>
   <form action="/listings/create" method="post">
-    <p><input type="text" name="address" placeholder="Location"></p>
-    <p><input type="text" name="name" placeholder="Name"></p>
-    <p><input type="text" name="description" placeholder="Description"></p>
-    <p><input type="price" name="price" placeholder="price"></p>
-    <p><input type="submit" value="Submit"></p>
+    <p><label>Location</label></p>
+    <input type="text" name="address">
+    <p><label>Name</label></p>
+      <input type="text" name="name">
+    <p><label>Description</label></p>
+      <input type="text" name="description">
+    <p><label>Price per night(£)</label></p>
+      <i>£</i><input type="price" name="price">
+    <p><label>Available from(DD/MM/YY)</label></p>
+      <input type="date" name="start_date">
+    <p><label>Available to(DD/MM/YY)</label></p>
+      <input type="date" name="end_date">
+    <p><input type="submit" value="List my space"></p>
   </form>
 </div>

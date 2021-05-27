@@ -19,6 +19,8 @@
       <%= listing.name %>
       <%= listing.description %>
       <%= listing.price %>
+      <p>Available from: <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></p>
+      <p>Available to: <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></p>
     </li>
   <% end %>
 </ul>

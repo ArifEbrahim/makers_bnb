@@ -30,7 +30,6 @@ attr_reader :user
     erb :"listings/index"
   end
 
-
   get '/book' do 
     erb(:book)
   end
@@ -48,7 +47,10 @@ attr_reader :user
       address: params[:address], 
       name: params[:name], 
       description: params[:description], 
-      price: params[:price])
+      price: params[:price],
+      start_date: params[:start_date],
+      end_date: params[:end_date]
+  )
     redirect "/listings"
   end
 

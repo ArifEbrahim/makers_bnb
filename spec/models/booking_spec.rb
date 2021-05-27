@@ -7,7 +7,9 @@ RSpec.describe Booking do
         address: "1 example road", 
         name: "Central London flat", 
         description: "Gorgeous two-bedroom flat on Example road", 
-        price: "89.00")
+        price: "89.00",
+        start_date: '2021-08-10',
+        end_date: '2021-08-17') 
       user = User.create(
         email: 'test@example.com', 
         password: 'password123')

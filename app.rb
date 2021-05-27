@@ -54,6 +54,22 @@ attr_reader :user
     redirect "/listings"
   end
 
+  get '/listings/:id/book' do
+    @listing = Listing.find(id: params[:id])
+    @user_id = session[:user_id]
+    erb(:book)
+  end
+
+  post '/booking' do
+    # add some logic
+    Booking.create(
+      start_date: params[:start_date],
+      listing_id: listing.id,
+      guest_id: user.id,
+    )
+    redirect '/booking_confirmation'
+  end
+
 
   run! if app_file == $PROGRAM_NAME
 end

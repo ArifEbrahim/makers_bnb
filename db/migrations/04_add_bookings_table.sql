@@ -1,0 +1,1 @@
+CREATE TABLE bookings (id SERIAL PRIMARY KEY, start_date VARCHAR(60), listing_id INTEGER REFERENCES listings(id), guest_id INTEGER REFERENCES users(id));

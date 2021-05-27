@@ -1,8 +1,7 @@
-
-require "sinatra/base"
-require "sinatra/reloader"
-require "./lib/listing"
-require "./lib/user"
+require 'sinatra/base'
+require 'sinatra/reloader'
+require './lib/listing'
+require './lib/user'
 require 'byebug'
 
 class MakersBnB < Sinatra::Base
@@ -10,18 +9,18 @@ class MakersBnB < Sinatra::Base
     register Sinatra::Reloader
   end
 
-enable :sessions
+  enable :sessions
 
-attr_reader :user
+  attr_reader :user
 
   get '/' do
-    erb :"index"
+    erb :index
   end
 
   post '/users' do
     user = User.create(email: params[:email], password: params[:password])
     session[:user_id] = user.id
-    redirect "/listings"
+    redirect '/listings'
   end
 
   get '/listings' do
@@ -30,13 +29,13 @@ attr_reader :user
     erb :"listings/index"
   end
 
-  get '/book' do 
+  get '/book' do
     erb(:book)
   end
 
-  get '/booking_confirmation' do 
-    "Thank you for your booking request"
-  end 
+  get '/booking_confirmation' do
+    'Thank you for your booking request'
+  end
 
   get '/listings/new' do
     erb :"listings/new"
@@ -44,16 +43,15 @@ attr_reader :user
 
   post '/listings/create' do
     Listing.create(
-      address: params[:address], 
-      name: params[:name], 
-      description: params[:description], 
+      address: params[:address],
+      name: params[:name],
+      description: params[:description],
       price: params[:price],
       start_date: params[:start_date],
       end_date: params[:end_date]
-  )
-    redirect "/listings"
+    )
+    redirect '/listings'
   end
-
 
   run! if app_file == $PROGRAM_NAME
 end

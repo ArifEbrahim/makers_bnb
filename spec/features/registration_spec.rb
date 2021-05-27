@@ -7,7 +7,7 @@ feature 'registration' do
     fill_in('password', with: 'password123')
     click_button('Sign up')
 
-    expect(current_path).to eq("/listings")
+    expect(current_path).to eq('/listings')
     expect(page).to have_content 'Welcome, test@example.com'
   end
 end

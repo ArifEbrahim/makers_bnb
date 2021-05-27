@@ -16,7 +16,7 @@
 #     click_button('List my space')
 
 #     visit('/listing/1/book')
-#     expect(Booking.create(start_date: '2021-11-04', listing_id: '1',
-#                           guest_id: '1')).to raise_error('This property is unavailable')
+#     expect(Booking.create(start_date: '2021-11-04', listing_id: 1,
+#                           guest_id: 1)).to raise_error
 #   end
 # end

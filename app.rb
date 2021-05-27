@@ -8,6 +8,7 @@ require 'byebug'
 class MakersBnB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
+    set :public_folder, Proc.new { File.join(root, 'static') }
   end
 
 enable :sessions
@@ -36,7 +37,7 @@ attr_reader :user
   end
 
   get '/booking_confirmation' do 
-    "Thank you for your booking request"
+    erb :"booking_confirmation"
   end 
 
   get '/listings/new' do

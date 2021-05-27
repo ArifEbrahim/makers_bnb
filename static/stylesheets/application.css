@@ -3,7 +3,7 @@ body {
   background-image: url("https://fthmb.tqn.com/kVpo4zFn-IRel7_g-hB3vXseD0A=/puresaltinteriors.-cb503015f1954be8ab6f750cda87a326.jpg");
   background-size: cover;
   font-size: 18px;
-  color: white;
+  color: darkslateblue;
 }
 
 .layout {
@@ -69,7 +69,7 @@ body {
 
 .header {
   background-color: rgba(9, 5, 46, 0.701);
-  top: -5px;
+  top:0px;
   height: 50px;
   position: sticky;
   width: 100%;
@@ -104,4 +104,9 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+h1.header_text {
+  margin-top: 0px;
+  padding-top: 0px;
 }

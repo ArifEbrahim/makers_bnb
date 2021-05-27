@@ -1,31 +1,36 @@
 require 'pg'
 
 class Listing
-  attr_reader :id, :address, :name, :description, :price
+  attr_reader :id, :address, :name, :description, :price, :start_date, :end_date
 
-  def initialize(id:, address:, name:, description:, price:)
+  def initialize(id:, address:, name:, description:, price:, start_date:, end_date:)
     @id = id
     @address = address
     @name = name
     @description = description
     @price = price
+    @start_date = start_date
+    @end_date = end_date
   end
 
-  def self.create(address:, name:, description:, price:)
+  def self.create(address:, name:, description:, price:, start_date:, end_date:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'makers_bnb_test')
     else
       connection = PG.connect(dbname: 'makers_bnb')
     end
 
-    result = connection.exec("INSERT INTO listings (address, name, description, price) VALUES('#{address}', '#{name}', '#{description}', '#{price}') RETURNING id, address, name, description, price;")
+    result = connection.exec("INSERT INTO listings (address, name, description, price, start_date, end_date) VALUES('#{address}', '#{name}', '#{description}', '#{price}', '#{start_date}', '#{end_date}') RETURNING id, address, name, description, price, start_date, end_date;").first
 
     Listing.new(
-      id: result.first['id'], 
-      address: result.first['address'], 
-      name: result.first['name'], 
-      description: result.first['description'], 
-      price: result.first['price'])
+      id: result['id'], 
+      address: result['address'], 
+      name: result['name'], 
+      description: result['description'], 
+      price: result['price'],
+      start_date: result['start_date'],
+      end_date: result['end_date']
+    )
   end
 
   def self.all
@@ -42,7 +47,10 @@ class Listing
         address: listing['address'], 
         name: listing['name'], 
         description: listing['description'], 
-        price: listing['price'])
+        price: listing['price'],
+        start_date: listing['start_date'],
+        end_date: listing['end_date']
+      )
     end
   end
 end

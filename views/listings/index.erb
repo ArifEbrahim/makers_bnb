@@ -1,10 +1,10 @@
 <%if @user%>
-  <h2> Welcome, <%=@user.email%></h2>
+  <h2 class="center"> Welcome, <%=@user.email%></h2>
 <%else%>
-  <h2>Welcome to Makers BnB </h2>
+  <h2 class="center">Welcome to Makers BnB </h2>
 <%end%>
 
-<h2> Book a space </h2>
+<h3> Book a space </h3>
 
 <div>
   <form action="/listings/new" method="get">
@@ -17,12 +17,19 @@
 <title>Listings</title>
   <link rel="stylesheet" href="../../stylesheets/application.css">
 
+  <div class="listing-container">
     <li>
-      <%= listing.address %>
-      <%= listing.name %>
-      <%= listing.description %>
-      <%= listing.price %>
+      <div><strong><%= listing.name %></strong><div>
+      <div><label>Address:</label>
+        <%= listing.address %></div>
+      <div><label>Description:</label>
+        <%= listing.description %></div>
+      <div><label>Price per night:</label>
+        £<%= listing.price %><div>
+      <form action="/book" method="GET">
+      <div><input class="button" type="submit" value="Book"></div>
     </li>
+  </div>
   <% end %>
 </ul>
 

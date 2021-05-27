@@ -1,16 +1,24 @@
-body {
-  text-align: center;
-  background-image: url("https://fthmb.tqn.com/kVpo4zFn-IRel7_g-hB3vXseD0A=/puresaltinteriors.-cb503015f1954be8ab6f750cda87a326.jpg");
-  background-size: cover;
-  font-size: 18px;
-  color: darkslateblue;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .layout {
-  display: grid;
-  padding-top: 0;
-  grid-row-gap: 2em;
+  text-align: center;
+  background-image: url("https://fthmb.tqn.com/kVpo4zFn-IRel7_g-hB3vXseD0A=/puresaltinteriors.-cb503015f1954be8ab6f750cda87a326.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 18px;
+  color: darkslateblue;
+  min-height: 80vh;
 }
+
+/* .layout { */
+/* display: grid;
+  padding-top: 0;
+  grid-row-gap: 2em; */
+/* } */
 
 #main-image {
   margin-top: 0.5em;
@@ -63,22 +71,19 @@ body {
   box-shadow: inset 0 1px 1px rgb(100 100 100 / 10%);
 }
 
-.form-container {
-  margin-top: 300px;
-}
-
 .header {
+  display: block;
   background-color: rgba(9, 5, 46, 0.701);
-  top:0px;
+  /* top: 0px; */
   height: 50px;
-  position: sticky;
+  /* position: sticky; */
   width: 100%;
-  float: left;
   text-align: left;
   color: white;
   padding: 10px 10px;
   font-size: 28px;
 }
+
 .footer {
   color: white;
   background-color: rgba(9, 5, 46, 0.801);
@@ -87,8 +92,6 @@ body {
   height: 50px;
   padding: 20px;
   font-size: 16px;
-  position: absolute;
-  bottom: 0;
 }
 
 .button.previous {
@@ -109,4 +112,63 @@ ul {
 h1.header_text {
   margin-top: 0px;
   padding-top: 0px;
+}
+
+.parent-listing-container {
+  background-color: white;
+  border: 5px solid darkslateblue;
+  width: 80%;
+}
+
+.listing-container {
+  background-color: white;
+  width: 60%;
+  border: 5px solid darkslateblue;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.textbox {
+  height: 100px;
+}
+
+text-[type="text"]::placeholder {
+  padding-top: -10px;
+  text-align: top;
+}
+
+.form-element {
+  width: 155px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-page-container {
+  position: relative;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.home-page-header {
+  height: 50px;
 }

@@ -26,10 +26,10 @@
         <%= listing.description %></div>
       <div><label>Price per night:</label>
         £<%= listing.price %><div>
-        <div><label>Available from:</label> 
+        <!--<div><label>Available from:</label> 
           <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></div>
         <div><label>Available to:</label> 
-        <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></div>
+        <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></div>-->
       <form action="/book" method="GET">
       <div><input class="button" type="submit" value="Book"></div>
     </li>

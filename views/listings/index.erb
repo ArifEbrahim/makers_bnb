@@ -21,6 +21,9 @@
       <%= listing.price %>
       <p>Available from: <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></p>
       <p>Available to: <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></p>
+      <form action="listings/<%= listing.id %>/book" method="get">
+        <input type="submit" value="Book">
+      </form>
     </li>
   <% end %>
 </ul>

@@ -2,6 +2,22 @@
 
 A web application that allows users to list spaces they have available, and to hire spaces for the night.
 
+## Getting Started
+
+1. Clone this repository onto your computer.
+2. Install the relevant gems using the command `bundle` in the terminal.
+3. Create a database called `makers_bnb` using `psql`.
+4. When connected to your database run each `SQL` query saved in the directory `./db/migrations`.
+5. Create a test database called `makers_bnb_test` using `psql` and run the same queries as in the main database.
+
+## How to run it
+
+To run this app, run `rackup` in the terminal, and navigate in your web browser to `localhost:9292`
+
+## How to test it
+
+This program is test-driven using RSpec, and you can run the tests anytime by running `rspec` in the terminal
+
 ## MVP
 
 1. Users can sign up.

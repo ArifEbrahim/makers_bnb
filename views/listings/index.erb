@@ -30,8 +30,10 @@
           <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></div>
         <div><label>Available to:</label> 
         <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></div>-->
-      <form action="/book" method="GET">
+      <form action="listings/<%= listing.id %>/book" method="get">
       <div><input class="button" type="submit" value="Book"></div>
+      </form>
+
     </li>
   </div>
   <% end %>

@@ -43,4 +43,22 @@ describe Listing do
       expect(Listing.all.first.end_date).to eq('2021-08-14')
     end
   end
+
+  describe '.find' do
+    it 'finds a listing by ID' do
+      listing = Listing.create(
+        address: "1 example road", 
+        name: "Central London flat", 
+        description: "Gorgeous two-bedroom flat on Example road", 
+        price: "89.00",
+        start_date: '2021-08-03',
+        end_date: '2021-08-14')
+      result = Listing.find(id: listing.id)
+
+      expect(result.id).to eq listing.id
+      expect(result.name).to eq listing.name
+      expect(result.price).to eq listing.price
+    end
+  end
+
 end

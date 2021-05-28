@@ -5,10 +5,12 @@ require "./lib/listing"
 require "./lib/user"
 require "./lib/booking"
 require 'byebug'
+require 'sinatra/flash'
 
 class MakersBnB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
+    register Sinatra::Flash
     set :public_folder, Proc.new { File.join(root, 'static') }
   end
 
@@ -63,7 +65,7 @@ attr_reader :user
   end
 
   post '/booking' do
-    Booking.create(
+    flash[:notice] = "This date is unavailable" unless Booking.create(
       start_date: params[:start_date],
       listing_id: params[:listing_id],
       guest_id: params[:user_id],

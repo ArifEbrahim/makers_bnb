@@ -14,6 +14,7 @@
   </div>
 
 
+
 <%=@listing.name%><br>
 <%=@listing.description%><br>
 <%=@listing.price%><br>
@@ -26,3 +27,5 @@ Availability window: <%=@listing.start_date%> - <%=@listing.end_date%><br>
   <input type='hidden' name='user_id' value='<%=@user_id%>'>
   <input type="submit" value="Submit"/>
 </form>
+
+<%= flash[:notice] %>

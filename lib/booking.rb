@@ -1,6 +1,6 @@
 require 'pg'
 require 'date'
-require 'listing'
+
 
 class Booking
   @connection = if ENV['ENVIRONMENT'] == 'test'

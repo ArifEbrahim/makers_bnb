@@ -1,10 +1,10 @@
 <%if @user%>
-  <h2> Welcome, <%=@user.email%></h2>
+  <h2 class="center"> Welcome, <%=@user.email%></h2>
 <%else%>
-  <h2>Welcome to Makers BnB </h2>
+  <h2 class="center">Welcome to Makers BnB </h2>
 <%end%>
 
-<h2> Book a space </h2>
+<h3> Book a space </h3>
 
 <div>
   <form action="/listings/new" method="get">
@@ -14,17 +14,28 @@
 
 <ul>
   <% @listings.each do |listing| %>
+<title>Listings</title>
+  <link rel="stylesheet" href="../../stylesheets/application.css">
+
+  <div class="listing-container">
     <li>
-      <%= listing.address %>
-      <%= listing.name %>
-      <%= listing.description %>
-      <%= listing.price %>
-      <p>Available from: <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></p>
-      <p>Available to: <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></p>
+      <div><strong><%= listing.name %></strong><div>
+      <div><label>Address:</label>
+        <%= listing.address %></div>
+      <div><label>Description:</label>
+        <%= listing.description %></div>
+      <div><label>Price per night:</label>
+        £<%= listing.price %><div>
+        <!--<div><label>Available from:</label> 
+          <%= Date.parse(listing.start_date).strftime("%-d %B %Y") %></div>
+        <div><label>Available to:</label> 
+        <%= Date.parse(listing.end_date).strftime("%-d %B %Y") %></div>-->
       <form action="listings/<%= listing.id %>/book" method="get">
-        <input type="submit" value="Book">
+      <div><input class="button" type="submit" value="Book"></div>
       </form>
+
     </li>
+  </div>
   <% end %>
 </ul>
 

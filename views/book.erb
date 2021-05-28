@@ -1,4 +1,18 @@
-<h1>Please enter your details below</h1>
+<title>Booking form</title>
+<link rel="stylesheet" href="../stylesheets/application.css">
+  <h3 class="center">Please enter your details below</h3>
+
+  <div class="form-container booking-form">
+      <form action="/booking_confirmation" method="get">
+          <input class="form-element" type="text" name="name" placeholder="Name"/><br>
+          <input class="form-element" type="text" name="email" placeholder="Email"/><br>
+          <input class="form-element" type="text" name="start_date" placeholder="Start Date"/><br>
+          <input class="form-element" type="number" min="1" name="nights" placeholder="Number of Nights"/><br>
+          <input class="form-element button" type="submit" value="Submit"/>
+      </form>
+    </div>
+  </div>
+
 
 <%=@listing.name%><br>
 <%=@listing.description%><br>

@@ -1,29 +1,36 @@
-require 'booking'
+require 'pg'
+require 'date'
+require 'listing'
 
-RSpec.describe Booking do
-  describe '.create' do
-    it 'saves booking data to the boking table' do
-      listing = Listing.create(
-        address: "1 example road", 
-        name: "Central London flat", 
-        description: "Gorgeous two-bedroom flat on Example road", 
-        price: "89.00",
+class Booking
+  @connection = if ENV['ENVIRONMENT'] == 'test'
+                  PG.connect(dbname: 'makers_bnb_test')
+                else
+                  PG.connect(dbname: 'makers_bnb')
+                end
 
-        start_date: '2021-08-10',
-        end_date: '2021-08-17') 
-      
-      user = User.create(
-        email: 'test@example.com', 
-        password: 'password123')
-      booking = Booking.create(
-        start_date: '2021-08-12',
-        listing_id: listing.id,
-        guest_id: user.id,
-      )
-      expect(booking.first['start_date']).to eq('2021-08-12')
-      expect(booking.first['listing_id']).to eq(listing.id)
-      expect(booking.first['guest_id']).to eq(user.id)
-      
-    end
+  def self.create(start_date:, listing_id:, guest_id:)
+       @listing_id = listing_id
+    @booking_start_date = start_date
+  
+    return false unless is_available?
+
+ 
+    @connection.exec("INSERT INTO bookings (start_date, listing_id, guest_id) VALUES ('#{start_date}', '#{listing_id}', '#{guest_id}') RETURNING *;")
+  end
+
+  private
+
+
+  def self.is_available?
+   
+    result = @connection.exec("SELECT * FROM listings WHERE id = '#{@listing_id.to_i}';")
+    
+    start_date = Date.parse(result[0]['start_date'])
+    end_date = Date.parse(result[0]['end_date'])
+    booking_start_date = Date.parse(@booking_start_date)
+
+   booking_start_date.between?(start_date, end_date)
+
   end
 end

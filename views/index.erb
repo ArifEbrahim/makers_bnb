@@ -1,15 +1,17 @@
 <title>Booking form</title>
 
   <h2 class="center home-page-header">Feel at home, anywhere</h2><br>
-    <h3 class="top-border">Sign up to MakersBnB </h3><br>
+  <div class="listing-container" style="margin-top: 5%;">
+    <h3 class="top-border" style="margin-top: 15px;">Sign up to MakersBnB </h3><br>
 
   <form action="/users" method="post">
   <div>
-      <div><input type="email" name="email" placeholder="Email"/></div><br>
-      <div><input type="password" name="password" placeholder="Password"/></div><br>
+      <div><span style="text-align: left;
+    display: inline-block;
+    width: 80px;">Email: </span><input type="email" name="email"/></div><br>
+      <div><span>Password: </span><input type="password" name="password"/></div><br>
       <div><input class="button" type="submit" value="Sign up"></div><br>
     </div>
   </div>
+  </div>
   </form>
-
-

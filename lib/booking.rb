@@ -25,11 +25,12 @@ class Booking
   def self.is_available?
    
     result = @connection.exec("SELECT * FROM listings WHERE id = '#{@listing_id.to_i}';")
-   p  start_date = result[0]['start_date']
-  p end_date = result[0]['end_date']
-  p booking_start_date = @booking_start_date
+    
+    start_date = Date.parse(result[0]['start_date'])
+    end_date = Date.parse(result[0]['end_date'])
+    booking_start_date = Date.parse(@booking_start_date)
 
-    # does range listing-start-date to listing-end-date include booking-start-date
-    # return true or false
+   booking_start_date.between?(start_date, end_date)
+
   end
 end

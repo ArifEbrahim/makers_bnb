@@ -24,6 +24,7 @@ group :development do
   gem 'bcrypt'
   gem 'byebug'
   gem 'pg'
+  gem 'date'
   #    gem 'pry'
   gem 'rack'
   gem 'rake'

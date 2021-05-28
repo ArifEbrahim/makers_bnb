@@ -36,7 +36,7 @@ RSpec.describe Booking do
       #   password: 'password123'
       # )
       booking = Booking.create(
-        start_date: '2021-08-05',
+        start_date: '05/08/2021',
         listing_id: listing.id,
         guest_id: user.id
       )

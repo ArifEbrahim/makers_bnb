@@ -1,12 +1,15 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
-require './lib/listing'
-require './lib/user'
+
+require "sinatra/base"
+require "sinatra/reloader"
+require "./lib/listing"
+require "./lib/user"
+require "./lib/booking"
 require 'byebug'
 
 class MakersBnB < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
+    set :public_folder, Proc.new { File.join(root, 'static') }
   end
 
   enable :sessions
@@ -33,9 +36,9 @@ class MakersBnB < Sinatra::Base
     erb(:book)
   end
 
-  get '/booking_confirmation' do
-    'Thank you for your booking request'
-  end
+  get '/booking_confirmation' do 
+    erb :"booking_confirmation"
+  end 
 
   get '/listings/new' do
     erb :"listings/new"
@@ -52,6 +55,22 @@ class MakersBnB < Sinatra::Base
     )
     redirect '/listings'
   end
+
+  get '/listings/:id/book' do
+    @listing = Listing.find(id: params[:id])
+    @user_id = session[:user_id]
+    erb(:book)
+  end
+
+  post '/booking' do
+    Booking.create(
+      start_date: params[:start_date],
+      listing_id: params[:listing_id],
+      guest_id: params[:user_id],
+    )
+    redirect '/booking_confirmation'
+  end
+
 
   run! if app_file == $PROGRAM_NAME
 end

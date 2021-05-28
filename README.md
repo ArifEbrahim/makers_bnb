@@ -12,15 +12,29 @@ A web application that allows users to list spaces they have available, and to h
 
 ## User stories
 
-1. User sign-up
-
 ```
 As a user,
 So that I can use the website,
 I want to be able to sign up.
-```
 
-| Object | Messages |
-| ------ | -------- |
-| User   | create   |
-|        | find     |
+As a user, 
+So that others can view my property,
+I want to list a property.
+
+As a user,
+So that I can make more money,
+I want to list multiple properties.
+
+As a user,
+So I can attract more renters,
+I want to display the name, description and price per night.
+
+As a user,
+So that I can choose when people rent my property,
+I want to be able to set available dates.
+
+As a user,
+So that I can rent a space for a night,
+I want to make a request to book a listing.
+
+```

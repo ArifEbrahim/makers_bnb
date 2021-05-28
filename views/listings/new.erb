@@ -1,19 +1,24 @@
-<h2>Please enter the details of your space below: </h2>
-
 <div>
-  <form action="/listings/create" method="post">
-    <p><label>Location</label></p>
-    <input type="text" name="address">
-    <p><label>Name</label></p>
-      <input type="text" name="name">
-    <p><label>Description</label></p>
-      <input type="text" name="description">
-    <p><label>Price per night(£)</label></p>
-      <i>£</i><input type="price" name="price">
-    <p><label>Available from(DD/MM/YY)</label></p>
-      <input type="date" name="start_date">
-    <p><label>Available to(DD/MM/YY)</label></p>
-      <input type="date" name="end_date">
-    <p><input type="submit" value="List my space"></p>
-  </form>
+  <title>Listings Form</title>
+  <link rel="stylesheet" href="../../stylesheets/application.css">
+  <h2>Please enter the details of your space below: </h2>
+    <div>
+    <form action="/listings/create" method="post">
+      <div class="form-container">
+        <p><label>Location</label></p>
+          <div><input class="form-element" type="text" name="address"></div>
+        <p><label>Name</label></p>
+          <div><input class="form-element" type="text" name="name"></div>
+        <p><label>Description</label></p>
+          <div><textarea class="form-element textbox" type="text" name="description"></textarea></div>
+        <p><label>Price per night(£)</label></p>
+          <div><input class="form-element" type="price" name="price" placeholder="£"></div>
+        <p><label>Available from(DD/MM/YY)</label><p>
+          <div><input class="form-element" type="date" name="start_date"/>
+        <p><label>Available to(DD/MM/YY)</label><p>
+          <div><input class="form-element" type="date" name="end_date"/><div>
+        <div><input class="form-element button" type="submit" value="List my space"></div>
+      </div>
+    </form>
+  </div>
 </div>

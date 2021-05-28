@@ -3,6 +3,7 @@ require "sinatra/base"
 require "sinatra/reloader"
 require "./lib/listing"
 require "./lib/user"
+require "./lib/booking"
 require 'byebug'
 
 class MakersBnB < Sinatra::Base
@@ -52,6 +53,21 @@ attr_reader :user
       end_date: params[:end_date]
   )
     redirect "/listings"
+  end
+
+  get '/listings/:id/book' do
+    @listing = Listing.find(id: params[:id])
+    @user_id = session[:user_id]
+    erb(:book)
+  end
+
+  post '/booking' do
+    Booking.create(
+      start_date: params[:start_date],
+      listing_id: params[:listing_id],
+      guest_id: params[:user_id],
+    )
+    redirect '/booking_confirmation'
   end
 
 
